@@ -1,0 +1,22 @@
+{% extends 'layout.html'%}
+{% block content %}
+    <div class="containerfluid" style="background-color: #FF6700; height: 20px;"></div>
+    <div class="containerfluid" >
+        <div id="regForm"  class="col-md-6 col-lg-6" style="margin: auto; margin-top: 100px;">
+        
+            <form  method="post" enctype="multipart/form-data" id="login">
+                <p style="text-align: right;">already have an account? <a href="{% url 'login' %}">login !</a></p>
+                
+                <br>
+                <center><h1>REGISTRATION</h1></center>
+                <p id="con_message">{{ message }}</p>
+                {% csrf_token %}
+                {{form}}
+                
+             
+                <center><button class="btn btn-dark col-md-3">submit</button></center>
+            </form>
+        </div>
+    </div>
+    <br>
+{% endblock content %}

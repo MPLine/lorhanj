@@ -1,0 +1,14 @@
+{% extends 'layout.html'%}
+{% block title %} Prototype {% endblock title %}
+]
+{% block content %}
+    <div class="col-lg-8 col-md-8" style="margin: auto; padding: 200px;">
+        {% if user.is_authenticated %}
+            <center>
+                <h1>TEST CONNECTION</h1>
+                <p>Vous êtes connecté en tant que {{ request.user }}. <a href="{% url 'logout' %}">Se déconnecter</a></p>
+            </center>
+        {% endif %}
+    </div>
+   
+{% endblock content %}

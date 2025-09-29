@@ -1,0 +1,50 @@
+body{
+    background-color:white;
+}
+.form-control
+{
+    margin-top: 20px;
+}
+#login{
+    padding: 20px;;
+}
+#login button{
+    width: 100%;
+    background-color:rgb(40, 40, 40);
+    color: white
+}
+#login button:hover{
+    background-color: #FF9248;
+    color: black
+}
+#regForm
+{
+    background-color: #FF9248;
+    padding: 30px;
+}
+#regForm .btn
+{
+     margin-top: 20px;
+
+}
+#regForm input
+{
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(241, 243, 239);
+    border-radius: 6px 6px 6px;
+}
+#regForm .helptext
+{
+    display:none;
+}
+#regForm h1{
+     margin-bottom: 50px;
+     margin-top: 10px;
+}
+#con_message,.errorlist
+{
+     color: rgb(250, 63, 63);
+     text-align: center;
+}
