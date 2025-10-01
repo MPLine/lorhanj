@@ -1,5 +1,5 @@
 body{
-    background-color:white;
+    background-color:rgb(244, 244, 244);
 }
 .form-control
 {
@@ -47,4 +47,63 @@ body{
 {
      color: rgb(250, 63, 63);
      text-align: center;
+}
+#header{
+    padding: 5px;
+    background-color: #ff6700;
+    color: white;
+}
+#header h3{
+   font-weight: bold;
+   margin-left: 10px;
+}
+#nav
+{
+    background-color: white;
+    height: 100%;
+   
+}
+#nav button
+{
+    
+    padding: 5px;
+    border: none;
+    border-radius: 6px 6px 6px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    background-color: white;
+    text-align: left;
+    color: #4f4f4f;
+    
+
+}
+#nav button:hover
+{
+    background-color: #ffb38a;
+    border-radius: 6px 6px 6px;
+    color: white;
+
+}
+#nav button:active
+{
+    background-color: #ffb38a;
+    border-radius: 6px 6px 6px;
+    color: white;
+
+}
+#nav i{
+    float: left;
+    margin-right: 10px;
+}
+#nav #post
+{
+    background-color: #ff6700;
+    color: white;
+}
+#nav #post:hover
+{
+    background-color: #1f1f1f;
+    color: white;
 }

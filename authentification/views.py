@@ -2,7 +2,7 @@ from django.contrib.auth import authenticate, login,logout
 from django.shortcuts import render,redirect
 from django.conf import settings
 from authentification import forms
-
+from authentification.models import UserProfile
 def logout_user(request):
     logout(request)
     return redirect('login')
@@ -32,7 +32,8 @@ def signup_page(request):
     if request.method =='POST':
         form =forms.SignupForm(request.POST)
         if form.is_valid():
-            user =form.save()
+            user=form.save()
+            UserProfile.objects.create(username =user, first_name=user.first_name,last_name=user.last_name, email=user.email,domaine=form.cleaned_data['domaine'],phone=form.cleaned_data['phone']).save
             login(request, user)
             return redirect('dashboard')
         else:

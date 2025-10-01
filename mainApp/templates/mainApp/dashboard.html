@@ -2,13 +2,39 @@
 {% block title %} Prototype {% endblock title %}
 ]
 {% block content %}
-    <div class="col-lg-8 col-md-8" style="margin: auto; padding: 200px;">
-        {% if user.is_authenticated %}
-            <center>
+    {% if user.is_authenticated %}
+    <div class="containerfluid">
+        <div class="row"></div>
+            <div class="col-md-12 col-lg-12" id="header">
+                <h3>Lorhanj</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-lg-2" id="nav">
+                 <button class="col-md-9 col-lg-9">
+                    <i class="bi bi-house-door"></i> Aceuil
+                </button>
+                <button class="col-md-9 col-lg-9">
+                   <i class="bi bi-chat-dots"></i> Chat
+                </button>
+                 <button class="col-md-9 col-lg-9">
+                    <i class="bi bi-people"></i> Friends
+                </button>
+                 <button id="post" class="col-md-9 col-lg-9">
+                    <i class="bi bi-plus-square"></i> Post
+                </button>
+               
+            </div>
+            <div class="col-lg-8 col-md-8" id="post">
                 <h1>TEST CONNECTION</h1>
-                <p>Vous êtes connecté en tant que {{ request.user }}. <a href="{% url 'logout' %}">Se déconnecter</a></p>
-            </center>
-        {% endif %}
+                <p><a href="{% url 'logout' %}">Se déconnecter</a></p>
+                
+            </div>
+            <div class="col-lg-2 col-md-2" id="friends">
+                <h1>zanmi</h1>
+                
+            </div>
+        </div>
     </div>
-   
+   {% endif %}
 {% endblock content %}
