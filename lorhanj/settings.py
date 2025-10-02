@@ -25,9 +25,14 @@ SECRET_KEY = 'django-insecure-(_cpormr-+l1jh_oj-u(eh66a7(v=qm@2_scj8y6a0#ux-gn^h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','lorhanj.onrender.com']
+ALLOWED_HOSTS = ['lorhanj.onrender.com']
+CSRF_TRUSTED_ORIGINS =['https://lorhanj.onrender.com/']
 
+# settings.py
 
+# This tells Django to trust a header set by the proxy (Render)
+# that indicates the request was made over HTTPS.
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Application definition
 
 INSTALLED_APPS = [
@@ -132,4 +137,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-CSRF_TRUSTED_ORIGINS =['https://lorhanj.onrender.com/']
