@@ -23,7 +23,9 @@
                  <button id="post" class="col-md-9 col-lg-9">
                     <i class="bi bi-plus-square"></i> Post
                 </button>
-               
+               {% if request.user.is_superuser%}
+                <p><a href="/admin/">admin dashbord</a></p>
+               {%endif%}
             </div>
             <div class="col-lg-8 col-md-8" id="post">
                 <h1>TEST CONNECTION</h1>

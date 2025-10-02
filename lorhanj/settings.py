@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(_cpormr-+l1jh_oj-u(eh66a7(v=qm@2_scj8y6a0#ux-gn^h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lorhanj.onrender.com']
+ALLOWED_HOSTS = ['lorhanj.onrender.com','127.0.0.1']
 CSRF_TRUSTED_ORIGINS =['https://lorhanj.onrender.com/']
 
 # settings.py
@@ -36,7 +36,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    #'django.contrib.admin',
+    'hide_admin.apps.HideAdminConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
